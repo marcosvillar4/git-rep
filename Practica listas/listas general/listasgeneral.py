@@ -21,39 +21,64 @@ def func(lista):
         resp = str.upper(input('respuesta: '))
         if resp not in ['1',"2",'3','4','5','6','7','8','9','10','11',"S"]:
             print('Valor no valido')
-
+    
     match resp:
         case '1':
             lista = f.func1(lista)
-            print(lista)
+            
             return lista
         case '2':
-            print(resp)
+            lista = f.func2(lista)
+            
+            return lista
         case '3':
-            print(resp)
+            lista = f.func3(lista)
+            
+            return lista
+            
         case '4':
-            print(resp)
+            lista = f.func4(lista)
+            
+            return lista
         case '5':
-            print(resp)
+            lista = f.func5(lista)
+            
+            return lista
         case '6':
-            print(resp)
+            lista = f.func6(lista)
+            
+            return lista
         case '7':
-            print(resp)
+            lista = f.func7(lista)
+            
+            return lista
         case '8':
-            print(resp)
+            lista = f.func8(lista)
+            return lista
         case '9':
-            print(resp)
-        case '10':
-            print(resp)
+            f.func9(lista)
+            
+            return lista
+        case '10':            
+            f.func10(lista)
+            return lista
+            
         case '11':
-            print(resp)
-        case 's':
-            print(resp)
+            f.func11(lista)
+            print(lista)
+            return lista
+        case 'S':
+            stop = True
+            lista = ['temp']
+            return lista
 end = ''
 while end != 'N':
     end = ''
+    exitco = False
     lista = func(lista)
-
+    if lista == ['temp']:
+        break
+    
     while end != 'N' and end != 'S':
         print('Desea realizar otra operacion?')
         end = str.upper(str(input('Respuesta: ')))
