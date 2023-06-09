@@ -1,8 +1,10 @@
 resp = ''
+lista = []
 import csv
+import funciones as f
 
-def func():
-
+def func(lista):
+    resp = ''
     print('Que funcion desea utilizar?')
         
     with open ('funciones.csv', 'r') as texto:
@@ -22,7 +24,9 @@ def func():
 
     match resp:
         case '1':
-            print(resp)
+            lista = f.func1(lista)
+            print(lista)
+            return lista
         case '2':
             print(resp)
         case '3':
@@ -45,6 +49,11 @@ def func():
             print(resp)
         case 's':
             print(resp)
+end = ''
+while end != 'N':
+    end = ''
+    lista = func(lista)
 
-
-func()
+    while end != 'N' and end != 'S':
+        print('Desea realizar otra operacion?')
+        end = str.upper(str(input('Respuesta: ')))
