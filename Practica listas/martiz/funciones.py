@@ -55,3 +55,6 @@ def f7(lista):
         templist.append(str(random.randint(0,9999)))
     lista.append(templist)
     return lista
+def f8(lista):
+    lista.reverse()
+    return lista

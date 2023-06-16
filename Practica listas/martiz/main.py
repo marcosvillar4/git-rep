@@ -28,6 +28,8 @@ while resp != 'N':
         case 7:
             matriz = func.f7(matriz)        
         case 8:
+            matriz = func.f8(matriz)
+        case 9:
             break
     while resp != 'N' and resp != 'S':
         resp = str.upper(input('Desea realizar otra operacion?: '))
