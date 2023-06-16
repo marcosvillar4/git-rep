@@ -40,7 +40,7 @@ def f5(lista):
         print(f'El promedio de la columna {col}, es {prom}')
     return lista
 def f6(lista):
-    mayor = 0
+    mayor = -9999999
     for row in range(0,len(lista)):
         listtemp = lista[row]
         for i in range(0,len(listtemp)):
