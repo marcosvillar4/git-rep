@@ -57,11 +57,15 @@ def func3(lista):
     return lista
 
 def func4(lista):
-    ultimapos = len(lista) - 1
-    print(ultimapos)
-    print(f'El ultimo valor de la lista es {lista[ultimapos]}')
-    lista.pop()
-    return lista
+    if len(lista) != 0:
+        ultimapos = len(lista) - 1
+        print(ultimapos)
+        print(f'El ultimo valor de la lista es {lista[ultimapos]}')
+        lista.pop()
+        return lista
+    else:
+        print('No es posible eliminar valores')
+        return lista
 
 def func5(lista):
     pos = 0
