@@ -1,6 +1,5 @@
 resp = ''
 lista = []
-import csv
 
 def func1(lista):
     valor = ''    
@@ -193,13 +192,13 @@ def func(lista):
     print("10. buscar el menor de la lista")
     print("11. ordenar por burbuja")
     print("S. Salir")
-    
-    while resp not in ['1',"2",'3','4','5','6','7','8','9','10','11',"S"]:
-        resp = str.upper(input('respuesta: '))
-        if resp not in ['1',"2",'3','4','5','6','7','8','9','10','11',"S"]:
+
+    while resp not in ['1',"2",'3','4','5','6','7','8','9','10','11',"S"]:          #chequeamos que la respuesta no tenga estos items      
+        resp = str.upper(input('respuesta: '))                                      #Definimos la respuesta como este item
+        if resp not in ['1',"2",'3','4','5','6','7','8','9','10','11',"S"]:         #Si la respuesta no esta en estos items, que repita el ciclo
             print('Valor no valido')
     
-    match resp:
+    match resp:                                                                     #Chequeamos la respuesta y ejecutamos la funcion correspondiente (match y case funciona como un if else largo)
         case '1':
             lista = func1(lista)
             
