@@ -1,24 +1,25 @@
-resp = ''
-lista = []
-import csv
-
 def func1(lista):
-    valor = ''    
+    valor = ''
+    
     valido = False
-    while valido != True:        
+    while valido != True:
+        
         try:
             valor = int(input('Numero para agregar a lista: '))
             print(valor)
             valido = True
             lista.append(valor)
-            return lista            
+            return lista
+            
         except:
             print('valor no valido')
             valido = False
 
 def func2(lista):
     valor = ''
-    valido = False    
+    valido = False
+
+    
     while valido != True:
         valido = False
         try:
@@ -30,7 +31,8 @@ def func2(lista):
             elif pos >= 1:
                 valido = True
                 lista.insert(pos - 1, valor)
-                return lista                
+                return lista
+                
         except:
             print('valor no valido')
             valido = False
@@ -102,11 +104,13 @@ def func7(lista):
         try:
             valor = int(input('Valor a buscar posiciones: '))
             print(valor)
-            valido = True            
+            valido = True
+            
             
         except:
             print('Valor no valido')
-            valido = False            
+            valido = False
+            
         
         listapos = []
         listtemp = []
@@ -150,6 +154,8 @@ def func9(lista):
             mayor = lista[i]
         
     print(f'El mayor es {mayor}')
+    
+
 
 def func10(lista):
     menor = 9999999999
@@ -176,85 +182,3 @@ def func11(lista):
         lista.reverse()
 
     return lista
-
-def func(lista):
-    resp = ''
-    print('Que funcion desea utilizar?')
-        
-    print("1. Agregar numero a la lista: Me pide un numero de la lista y lo agrega al final de la lista.")
-    print("2. Agregar numero de la lista en una posicion: Me pide un numero y una posicion y si la posicion existe en la lista lo agreaga a ella (la posicion se pide a partir de 1).")
-    print("3. Agregar un conjunto de datos a lista.")
-    print("4. Eliminar el ultimo numero: Muestra el ultimo numero de la lista y lo borra.")
-    print("5. Eliminar un numero: Pide una posicion y si la posicion existe en la lista lo borra de ella (la posicion se pide a partir de 1).")
-    print("6. Contar numeros: Te pide un numero y te dice cuantas apariciones hay en la lista.")
-    print("7. Posiciones de un numero: recibe un numero y te dice en que posiciones está (contando desde 1).")
-    print("8. Mostrar lista: Muestra los numeros de la lista")
-    print("9. buscar el mayor de la lista ")
-    print("10. buscar el menor de la lista")
-    print("11. ordenar por burbuja")
-    print("S. Salir")
-    
-    while resp not in ['1',"2",'3','4','5','6','7','8','9','10','11',"S"]:
-        resp = str.upper(input('respuesta: '))
-        if resp not in ['1',"2",'3','4','5','6','7','8','9','10','11',"S"]:
-            print('Valor no valido')
-    
-    match resp:
-        case '1':
-            lista = func1(lista)
-            
-            return lista
-        case '2':
-            lista = func2(lista)
-            
-            return lista
-        case '3':
-            lista = func3(lista)
-            
-            return lista
-            
-        case '4':
-            lista = func4(lista)
-            
-            return lista
-        case '5':
-            lista = func5(lista)
-            
-            return lista
-        case '6':
-            lista = func6(lista)
-            
-            return lista
-        case '7':
-            lista = func7(lista)
-            
-            return lista
-        case '8':
-            lista = func8(lista)
-            return lista
-        case '9':
-            func9(lista)
-            
-            return lista
-        case '10':            
-            func10(lista)
-            return lista
-            
-        case '11':
-            func11(lista)
-            print(lista)
-            return lista
-        case 'S':
-            lista = ['temp']
-            return lista
-end = ''
-while end != 'N':
-    end = ''
-    exitco = False
-    lista = func(lista)
-    if lista == ['temp']:
-        break
-    
-    while end != 'N' and end != 'S':
-        print('Desea realizar otra operacion?')
-        end = str.upper(str(input('Respuesta: ')))
